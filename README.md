@@ -3,6 +3,5 @@ Weather app with Weatherbit API + Gemini AI summary. Features city search, real-
 
 # Weather Dashboard  
 
-🌦️ Displays real-time weather using Weatherbit API  
-🤖 Generates AI summaries via Google Gemini  
+🌦️ Displays real-time weather using Weatherbit API   
 🔍 City search | 📱 Responsive design | 🛠️ Error handling  
