@@ -1,8 +1,7 @@
-// API Configuration
-const API_KEY = "03f645d32616420ead0ff8943579a359"; // ⚠️ Replace with your Weatherbit key
+
+const API_KEY = "API-KEY"; 
 const BASE_URL = "https://api.weatherbit.io/v2.0/current";
 
-// DOM Elements
 const cityInput = document.getElementById('city-input');
 const searchBtn = document.getElementById('search-btn');
 const cityName = document.getElementById('city-name');
@@ -12,16 +11,13 @@ const weatherDescription = document.getElementById('weather-description');
 const humidity = document.getElementById('humidity');
 const windSpeed = document.getElementById('wind-speed');
 
-// Initialize with default city
 fetchWeather("London");
 
-// Event Listeners
 searchBtn.addEventListener('click', () => {
   const city = cityInput.value.trim();
   if (city) fetchWeather(city);
 });
 
-// Fetch Weather Data
 async function fetchWeather(city) {
   try {
     const response = await fetch(`${BASE_URL}?city=${city}&key=${API_KEY}&units=M`);
@@ -36,7 +32,6 @@ async function fetchWeather(city) {
   }
 }
 
-// Update UI with Weather Data
 function updateUI(weather) {
   cityName.textContent = weather.city_name;
   currentDate.textContent = new Date().toLocaleDateString('en-US', { 
